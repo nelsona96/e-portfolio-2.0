@@ -15,7 +15,7 @@
       <nav>
         <figure class="nav__logo--wrapper">
           <svg
-            viewBox="0 0 36.606108 21.034469"
+            viewBox="0 0 37.5 21.034469"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:svg="http://www.w3.org/2000/svg"
@@ -23,12 +23,12 @@
             class="nav__logo"
           >
             <path
-              id="nav__logo--a"
+              class="nav__logo--a"
               fill="currentColor"
               d="M 16.094625,0 V 0.002 H 10.95282 L 0,21.034426 h 4.8519 l 2.700611,-5.360324 h 8.542114 v 5.358367 h 0.01033 v 0.002 l 0.628902,-0.002 h 3.363102 V 0 Z m -3.382739,5.063746 h 3.382739 v 7.387858 H 9.186519 l 0.948263,-1.870636 c 0.755951,-1.477614 1.614984,-3.316517 2.577104,-5.517222 z"
             />
             <path
-              id="nav__logo--n"
+              class="nav__logo--n"
               fill="currentColor"
               d="M 21.155361,9.3925135e-4 V 5.5326375 L 32.669387,21.033362 h 3.93672 V 9.3925135e-4 H 32.9164 L 33.040424,15.500099 21.922756,9.3925135e-4 Z"
             />
@@ -38,28 +38,28 @@
         <ul class="nav__links">
           <li class="nav__link">
             <a
-              href=""
+              href="#"
               class="nav__anchor link__hover-effect link__hover-effect--black"
               >About</a
             >
           </li>
           <li class="nav__link">
             <a
-              href=""
+              href="#"
               class="nav__anchor link__hover-effect link__hover-effect--black"
               >Projects</a
             >
           </li>
           <li class="nav__link">
             <a
-              href=""
+              href="#"
               class="nav__anchor link__hover-effect link__hover-effect--black"
               >Contact</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link click">
             <a
-              href=""
+              href="#"
               class="nav__anchor link__hover-effect link__hover-effect--black"
             >
               <i class="fa-solid fa-circle-half-stroke"></i>
@@ -68,6 +68,44 @@
         </ul>
       </nav>
     </header>
-    <section id="landing-page"></section>
+
+    <main>
+      <section id="hero">
+        <div class="container">
+          <div class="row">
+            <div class="hero__message">
+              <h1 class="hero__title">
+                Hey <br />
+                <span class="hero__title--highlight">I'm Alex.</span>
+              </h1>
+              <p class="hero__para">
+                I'm a
+                <span class="text-highlight">Frontend Software Engineer</span>
+                with a strong passion for building web applications with great
+                user experiences. <br />
+                Here's a bit more <span class="text-highlight">about me.</span>
+              </p>
+              <div class="hero__links">
+                <a href="#" class="hero__link click">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="hero__link click">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#" class="hero__link click">
+                  <i class="fa-regular fa-file"></i>
+                </a>
+              </div>
+            </div>
+            <button class="mail__btn click">
+              <i class="fa fa-envelope"></i>
+            </button>
+            <a href="#projects" class="scroll">
+              <div class="scroll__icon click"></div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

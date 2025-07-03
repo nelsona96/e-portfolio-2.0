@@ -7,16 +7,60 @@
    viewBox="0 0 36.606108 21.034469"
    version="1.1"
    id="svg1"
+   sodipodi:docname="AN Logo.svg"
+   inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
+   inkscape:export-filename="AN Logo.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="49.143921"
+     inkscape:cy="38.537319"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showguides="false">
+    <sodipodi:guide
+       position="36.391576,280.83614"
+       orientation="1,0"
+       id="guide2"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
   <defs
-     id="defs1" />
+     id="defs1">
+    <rect
+       x="186.4063"
+       y="212.25827"
+       width="333.35434"
+       height="287.0929"
+       id="rect1" />
+  </defs>
   <path
      d="M 21.155361,9.3925135e-4 V 5.5326375 L 32.669387,21.033362 h 3.93672 V 9.3925135e-4 H 32.9164 L 33.040424,15.500099 21.922756,9.3925135e-4 Z"
      style="font-weight:bold;font-size:8.46667px;font-family:Corbel;-inkscape-font-specification:'Corbel Bold';display:inline;stroke-width:0.935531"
-     id="path1" />
+     id="path1"
+     inkscape:label="N"
+     sodipodi:nodetypes="ccccccccc" />
   <path
      id="text5"
      style="font-weight:bold;font-size:8.46667px;font-family:Corbel;-inkscape-font-specification:'Corbel Bold';display:inline;stroke-width:0.935531"
-     d="M 16.094625,0 V 0.002 H 10.95282 L 0,21.034426 h 4.8519 l 2.700611,-5.360324 h 8.542114 v 5.358367 h 0.01033 v 0.002 l 0.628902,-0.002 h 3.363102 V 0 Z m -3.382739,5.063746 h 3.382739 v 7.387858 H 9.186519 l 0.948263,-1.870636 c 0.755951,-1.477614 1.614984,-3.316517 2.577104,-5.517222 z" />
+     d="M 16.094625,0 V 0.002 H 10.95282 L 0,21.034426 h 4.8519 l 2.700611,-5.360324 h 8.542114 v 5.358367 h 0.01033 v 0.002 l 0.628902,-0.002 h 3.363102 V 0 Z m -3.382739,5.063746 h 3.382739 v 7.387858 H 9.186519 l 0.948263,-1.870636 c 0.755951,-1.477614 1.614984,-3.316517 2.577104,-5.517222 z"
+     sodipodi:nodetypes="cccccccccccccccccccc"
+     inkscape:label="A" />
 </svg>
