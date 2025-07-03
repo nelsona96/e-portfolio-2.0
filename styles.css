@@ -61,6 +61,21 @@ nav {
   color: black;
 }
 
+#nav__logo--a {
+    color: black;
+}
+
+#nav__logo--n {
+    color: #242424;
+    transform: translateX(0px);
+    transition: all 150ms ease;
+}
+
+.nav__logo:hover #nav__logo--n {
+    color: black;
+    transform: translateX(-1.2px);
+}
+
 .nav__links {
   display: flex;
   align-items: center;
