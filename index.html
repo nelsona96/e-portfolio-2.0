@@ -58,10 +58,7 @@
             >
           </li>
           <li class="nav__link click">
-            <a
-              href="#"
-              class="nav__anchor link__hover-effect link__hover-effect--black"
-            >
+            <a href="#" class="nav__anchor">
               <i class="fa-solid fa-circle-half-stroke"></i>
             </a>
           </li>
@@ -70,9 +67,15 @@
     </header>
 
     <main>
+      <section id="fixed">
+        <button class="mail__btn click">
+          <i class="fa fa-envelope"></i>
+        </button>
+      </section>
+
       <section id="hero">
-        <div class="container">
-          <div class="row">
+        <div class="container hero__container">
+          <div class="row hero__row">
             <div class="hero__message">
               <h1 class="hero__title">
                 Hey <br />
@@ -97,15 +100,13 @@
                 </a>
               </div>
             </div>
-            <button class="mail__btn click">
-              <i class="fa fa-envelope"></i>
-            </button>
             <a href="#projects" class="scroll">
               <div class="scroll__icon click"></div>
             </a>
           </div>
         </div>
       </section>
+
       <section id="projects">
         <div class="container">
           <div class="row">
@@ -204,6 +205,68 @@
           </div>
         </div>
       </section>
+
+      <footer>
+        <div class="container footer__container">
+          <div class="row footer__row">
+            <a href="#" class="footer__logo--wrapper">
+              <svg
+                viewBox="0 0 37.5 21.034469"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:svg="http://www.w3.org/2000/svg"
+                id="svg1"
+                class="footer__logo"
+              >
+                <path
+                  class="footer__logo--a"
+                  fill="currentColor"
+                  d="M 16.094625,0 V 0.002 H 10.95282 L 0,21.034426 h 4.8519 l 2.700611,-5.360324 h 8.542114 v 5.358367 h 0.01033 v 0.002 l 0.628902,-0.002 h 3.363102 V 0 Z m -3.382739,5.063746 h 3.382739 v 7.387858 H 9.186519 l 0.948263,-1.870636 c 0.755951,-1.477614 1.614984,-3.316517 2.577104,-5.517222 z"
+                />
+                <path
+                  class="footer__logo--n"
+                  fill="currentColor"
+                  d="M 21.155361,9.3925135e-4 V 5.5326375 L 32.669387,21.033362 h 3.93672 V 9.3925135e-4 H 32.9164 L 33.040424,15.500099 21.922756,9.3925135e-4 Z"
+                />
+                />
+              </svg>
+              <span class="footer__logo--popper">
+                Top
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+            <div class="footer__links">
+              <a
+                href="#"
+                class="footer__link link__hover-effect link__hover-effect--white"
+              >
+                GitHub
+              </a>
+              <a
+                href="#"
+                class="footer__link link__hover-effect link__hover-effect--white"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="#"
+                class="footer__link link__hover-effect link__hover-effect--white"
+              >
+                Resume
+              </a>
+              <a
+                href="#"
+                class="footer__link link__hover-effect link__hover-effect--white"
+              >
+                Contact
+              </a>
+            </div>
+            <div class="footer__copyright">
+              Copyright &copy; 2025 Alex Nelson
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
