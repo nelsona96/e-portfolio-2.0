@@ -277,8 +277,8 @@ HERO / LANDING PAGE
   bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
-  /* animation: scroll-disappear ease;
-  animation-timeline: scroll(); */
+  animation: scroll-disappear ease;
+  animation-timeline: scroll();
 }
 
 .scroll__icon {
