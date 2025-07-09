@@ -62,7 +62,7 @@
               >Projects</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__anchor link__hover-effect link__hover-effect--black"
@@ -80,7 +80,7 @@
 
     <main>
       <section id="fixed">
-        <button class="mail__btn click">
+        <button class="mail__btn click" onclick="toggleModal()">
           <i class="fa fa-envelope"></i>
         </button>
         <div class="modal">
@@ -181,8 +181,8 @@
               <br />
               Looking forward to speaking to you soon.
             </div>
+            <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
           </div>
-          <i class="fas fa-times modal__exit click"></i>
         </div>
       </section>
 
@@ -199,14 +199,14 @@
                 <span class="text-highlight">Frontend Software Engineer</span>
                 with a strong passion for building web applications with great
                 user experiences. <br />
-                Here's a bit more <span class="text-highlight">about me.</span>
+                Here's a bit more <span class="hero__about-me text-highlight" onclick="toggleModal()">about me.</span>
               </p>
               <div class="hero__links">
                 <a href="#" class="hero__link click">
-                  <i class="fa-brands fa-linkedin-in"></i>
+                  <i class="fa-brands fa-github"></i>
                 </a>
                 <a href="#" class="hero__link click">
-                  <i class="fa-brands fa-github"></i>
+                  <i class="fa-brands fa-linkedin-in"></i>
                 </a>
                 <a href="#" class="hero__link click">
                   <i class="fa-regular fa-file"></i>
@@ -368,8 +368,8 @@
                 Resume
               </a>
               <a
-                href="#"
                 class="footer__link link__hover-effect link__hover-effect--white"
+                onclick="toggleModal()"
               >
                 Contact
               </a>

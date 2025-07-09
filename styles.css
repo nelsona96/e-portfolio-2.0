@@ -46,6 +46,7 @@ li {
 a {
   color: #27272a;
   text-decoration: none;
+  cursor: pointer;
 }
 
 img {
@@ -157,6 +158,24 @@ label {
   color: #f43f5e;
 }
 
+header,
+#hero,
+#projects,
+footer {
+  opacity: 1;
+  visibility: visible;
+  transition: all 600ms 400ms ease-in;
+}
+
+.modal--open header,
+.modal--open #hero,
+.modal--open #projects,
+.modal--open footer {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 600ms 150ms ease-in;
+}
+
 /*
 
 FIXED ELEMENTS 
@@ -167,9 +186,9 @@ FIXED ELEMENTS
   display: flex;
   align-items: center;
   justify-content: center;
-  width: clamp(4rem, 8vw, 6rem);
-  height: clamp(4rem, 8vw, 6rem);
-  font-size: clamp(2rem, 4vw + 0.2rem, 3.2rem);
+  width: clamp(5rem, 8vw, 6rem);
+  height: clamp(5rem, 8vw, 6rem);
+  font-size: clamp(2.8rem, 4vw + 0.2rem, 3.2rem);
   border: none;
   border-radius: 50%;
   color: #fff;
@@ -178,6 +197,10 @@ FIXED ELEMENTS
   bottom: 24px;
   right: 24px;
   z-index: 100;
+}
+
+.modal--open .mail__btn {
+  visibility: visible;
 }
 
 /* MODALS */
@@ -189,11 +212,19 @@ FIXED ELEMENTS
   width: 90%;
   max-width: 1100px;
   height: 700px;
-  box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   overflow: hidden;
   display: flex;
-  z-index: -100;
+  visibility: hidden;
+  z-index: -1;
+  transition: box-shadow 100ms, visibility 1s, z-index 1s;
+}
+
+.modal--open .modal {
+  box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.5);
+  visibility: visible;
+  z-index: 100;
+  transition: box-shadow 1s 150ms, visibility 1s, z-index 1s;
 }
 
 .modal__half {
@@ -222,6 +253,14 @@ FIXED ELEMENTS
 
 .modal__about {
   background-color: #f4f4f5;
+  transform: translateX(-110%);
+  transition: transform 300ms ease-out;
+}
+
+.modal--open .modal__about,
+.modal--open .modal__contact {
+  transform: translateX(0);
+  transition: transform 300ms ease-in;
 }
 
 .modal__languages {
@@ -266,6 +305,8 @@ FIXED ELEMENTS
   background-color: #27272a;
   color: #fff;
   position: relative;
+  transform: translateX(110%);
+  transition: transform 300ms ease-out;
 }
 
 .form__item {
@@ -296,7 +337,7 @@ FIXED ELEMENTS
 }
 
 .modal__overlay {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -336,6 +377,7 @@ FIXED ELEMENTS
 
 .modal__overlay--visible {
   z-index: 100;
+  display: flex;
 }
 
 .modal__exit {
@@ -454,6 +496,10 @@ HERO / LANDING PAGE
   font-weight: 500;
   line-height: 1.8;
   text-wrap: balance;
+}
+
+.hero__about-me {
+  cursor: pointer;
 }
 
 .hero__links {
@@ -663,7 +709,7 @@ footer {
 .footer__logo {
   width: 64px;
   color: #fff;
-  margin-bottom: 2.4rem;
+  margin-bottom: 4rem;
   z-index: 10;
 }
 
@@ -694,7 +740,7 @@ footer {
   justify-content: space-around;
   width: 100%;
   max-width: 500px;
-  margin-bottom: 4.8rem;
+  margin-bottom: 7.2rem;
 }
 
 .footer__copyright {
