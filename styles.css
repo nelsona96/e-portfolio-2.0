@@ -28,6 +28,21 @@ section {
   background-color: #f4f4f5;
 }
 
+#projects {
+  position: relative;
+  z-index: 50;
+  backdrop-filter: blur(100px);
+}
+
+footer {
+  position: relative;
+  z-index: 1000;
+}
+
+#absolute-fixed {
+  z-index: 10;
+}
+
 .container {
   padding: 48px 0;
   width: 100%;
@@ -146,6 +161,8 @@ textarea {
   resize: none;
   height: 10rem;
   margin-top: 0.8rem;
+  scrollbar-width: thin;
+  scrollbar-color: #10b981 transparent;
 }
 
 label {
@@ -178,7 +195,48 @@ footer {
 
 /*
 
-FIXED ELEMENTS 
+DARK THEME 
+
+*/
+
+.dark-theme,
+.dark-theme section,
+.dark-theme header {
+  background-color: #27272a;
+}
+
+.dark-theme .theme__btn,
+.dark-theme .nav__anchor,
+.dark-theme .hero__title,
+.dark-theme .hero__para,
+.dark-theme .section__title,
+.dark-theme .nav__logo--a,
+.dark-theme .nav__logo:hover .nav__logo--n {
+  color: #fff;
+}
+
+.dark-theme .link__hover-effect--black:after,
+.dark-theme .scroll__icon::after {
+  background-color: #fff;
+}
+
+.dark-theme .scroll__icon {
+  border-color: #fff;
+}
+
+.dark-theme .nav__logo--n,
+.dark-theme .nav__logo:hover .nav__logo--a {
+  color: #047857;
+}
+
+.dark-theme .mail__btn {
+  color: #27272a;
+  background-color: #fff;
+}
+
+/*
+
+ABSOLUTE/FIXED/FLOATING ELEMENTS 
 
 */
 
@@ -397,6 +455,7 @@ HEADER / NAV BAR
 
 header {
   padding: 0 24px;
+  background-color: #f4f4f5;
 }
 
 nav {
@@ -415,7 +474,6 @@ nav {
 
 .nav__logo {
   width: 64px;
-  color: #09090b;
 }
 
 .nav__logo--a {
@@ -526,8 +584,8 @@ HERO / LANDING PAGE
   bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
-  /* animation: scroll-disappear ease;
-  animation-timeline: scroll(); */
+  animation: scroll-disappear ease;
+  animation-timeline: scroll();
 }
 
 .scroll__icon {
@@ -678,8 +736,6 @@ FOOTER
 footer {
   background-color: #27272a;
   display: flex;
-  view-timeline-name: --footer-view;
-  view-timeline-axis: block;
 }
 
 .footer__container {
@@ -747,73 +803,51 @@ footer {
   font-size: 1.4rem;
 }
 
-/* 
+/*
 
-RESPONSIVENESS
+SHAPES 
 
 */
 
-/* TABLETS AND LARGE PHONES */
-@media (max-width: 768px) {
-  #hero {
-    padding: 0 24px;
-  }
-
-  .hero__row {
-    justify-content: center;
-    padding-bottom: 160px;
-  }
-
-  .hero__message {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hero__title {
-    margin-left: 0;
-  }
-
-  .hero__para {
-    text-align: center;
-    margin-bottom: 2.4rem;
-  }
-
-  #projects {
-    padding: 0 48px;
-  }
-
-  .project__description {
-    display: none;
-  }
+.shape {
+  position: fixed;
+  width: 20px;
 }
 
-/* MEDIUM PHONES AND TABLETS */
-@media (max-width: 600px) {
-  .hero__title {
-    font-size: 9.6rem;
-  }
-
-  .hero__para {
-    font-size: 2.4rem;
-  }
+/* Shape Rows */
+.shape--0,
+.shape--1,
+.shape--2 {
+  top: 15vh;
 }
 
-/* SMALL PHONES */
-@media (max-width: 480px) {
-  .hero__title {
-    font-size: 8rem;
-  }
-
-  .hero__para {
-    font-size: 2rem;
-  }
+.shape--3,
+.shape--4,
+.shape--5 {
+  top: 50vh;
 }
 
-/* SUPER SMALL */
-@media (max-width: 350px) {
-  .hero__title {
-    text-align: center;
-  }
+.shape--6,
+.shape--7,
+.shape--8 {
+  top: 80vh;
+}
+
+/* Shape Columns */
+.shape--0,
+.shape--3,
+.shape--6 {
+  left: 5vw;
+}
+
+.shape--1,
+.shape--4,
+.shape--7 {
+  left: 50vw;
+}
+
+.shape--2,
+.shape--5,
+.shape--8 {
+  left: 90vw;
 }
