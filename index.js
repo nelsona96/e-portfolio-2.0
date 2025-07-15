@@ -59,3 +59,5 @@ function toggleContrast() {
   }
   // document.body.classList.toggle("dark-theme");
 }
+
+let input = document.querySelector(".")
