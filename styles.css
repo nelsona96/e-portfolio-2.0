@@ -136,6 +136,7 @@ button {
 
 input,
 textarea {
+  font-family: inherit;
   font-size: 1.6rem;
   width: 100%;
   height: 3rem;
@@ -180,8 +181,17 @@ label {
   color: #f43f5e;
 }
 
+a,
+button,
+.click,
+.hero__about-me {
+  -webkit-tap-highlight-color: transparent;
+}
+
 header,
 .hero__message,
+.scroll,
+.scroll__icon,
 #projects,
 footer {
   opacity: 1;
@@ -191,6 +201,8 @@ footer {
 
 .modal--open header,
 .modal--open .hero__message,
+.modal--open .scroll,
+.modal--open .scroll__icon,
 .modal--open #projects,
 .modal--open footer {
   opacity: 0;
@@ -204,10 +216,23 @@ DARK THEME
 
 */
 
+header,
+section,
+.scroll__icon::after {
+  transition: background-color 150ms ease;
+}
+
 .dark-theme,
 .dark-theme section,
 .dark-theme header {
   background-color: #27272a;
+}
+
+.theme__btn,
+.nav__anchor,
+.hero__title,
+.hero__para {
+  transition: color 150ms ease;
 }
 
 .dark-theme .theme__btn,
@@ -225,6 +250,10 @@ DARK THEME
   background-color: #fff;
 }
 
+.scroll__icon {
+  transition: all 150ms ease;
+}
+
 .dark-theme .scroll__icon {
   border-color: #fff;
 }
@@ -234,18 +263,27 @@ DARK THEME
   color: #1d4ed8;
 }
 
+.mail__btn {
+  transition: all 150ms ease;
+}
+
 .dark-theme .mail__btn {
   color: #27272a;
   background-color: #fff;
 }
 
+#projects::before,
+footer::before {
+  transition: background-color 150ms ease;
+}
+
 .dark-theme #projects::before {
-  background: #27272a;
+  background-color: #27272a;
   mask-image: linear-gradient(to bottom, transparent 0%, #27272a 100%);
 }
 
 .dark-theme footer::before {
-  background: #27272a;
+  background-color: #27272a;
   mask-image: linear-gradient(to bottom, transparent 0%, #27272a 90%);
 }
 
@@ -349,16 +387,17 @@ ABSOLUTE/FIXED/FLOATING ELEMENTS
 
 .modal__languages {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .modal__language {
-  width: 25%;
-  padding: 1.6rem;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 25%;
+  padding: 1.6rem;
   transform: scale(1);
   filter: brightness(100%);
   transition: all 300ms ease;
@@ -392,7 +431,7 @@ ABSOLUTE/FIXED/FLOATING ELEMENTS
   color: #fff;
   position: relative;
   transform: translateX(200%);
-  box-shadow: 16px 20px 80px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 24px 20px 80px 0 rgba(0, 0, 0, 0.5);
   transition: transform 600ms ease-in-out;
 }
 
@@ -469,7 +508,7 @@ ABSOLUTE/FIXED/FLOATING ELEMENTS
   background-color: #15803d;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 700;
   text-align: center;
   padding: 2.4rem;
@@ -483,11 +522,22 @@ ABSOLUTE/FIXED/FLOATING ELEMENTS
 
 .modal__exit {
   position: absolute;
-  top: 30px;
-  right: 40px;
-  color: #fff;
+  top: 3rem;
+  right: 4rem;
   font-size: 3.6rem;
   z-index: 100;
+}
+
+.modal__exit--white {
+  color: #fff;
+}
+
+.modal__exit--black {
+  display: none;
+  color: #27272a;
+  top: 1.6rem;
+  right: 2.4rem;
+  font-size: 3.2rem;
 }
 
 /* 
@@ -628,8 +678,8 @@ HERO / LANDING PAGE
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
-  /* animation: scroll-disappear ease;
-  animation-timeline: scroll(); */
+  animation: scroll-disappear ease;
+  animation-timeline: scroll();
 }
 
 .scroll__icon {
@@ -696,9 +746,10 @@ PROJECTS
 }
 
 .section__title {
+  font-size: 4rem;
   text-align: center;
-  margin-bottom: 6.4rem;
   text-wrap: balance;
+  margin-bottom: 6.4rem;
 }
 
 .project {
@@ -764,23 +815,37 @@ PROJECTS
 }
 
 .project__title {
+  font-size: 4.8rem;
+  font-weight: 700;
+  margin-left: -0.3rem;
   line-height: 1;
   margin-bottom: 0.8rem;
 }
 
 .project__sub-title {
   font-size: 1.8rem;
+  font-weight: 400;
   line-height: 1;
+  color: #f4f4f5;
   margin-bottom: 1.6rem;
 }
 
 .project__para {
+  font-size: 2rem;
+  font-weight: 500;
   margin-bottom: 1.6rem;
 }
 
 .project__link {
+  color: #d4d4d8;
+  font-size: 2.4rem;
+}
+
+.project__link:hover {
   color: #fff;
-  font-size: 20px;
+}
+
+.project__link:not(:last-child) {
   margin-right: 1.6rem;
 }
 
@@ -927,8 +992,16 @@ RESPONSIVENESS
 
 */
 
-/* Tablets, large phones */
+/* Tablets, large and small phones */
 @media (max-width: 768px) {
+  .shape {
+    display: none;
+  }
+
+  #hero {
+    padding: 0 60px;
+  }
+
   .hero__title {
     font-size: 8rem;
   }
@@ -943,12 +1016,78 @@ RESPONSIVENESS
     transform: none;
     height: auto;
     width: 100%;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .modal__half {
     width: 100%;
     border-radius: 0;
+    padding: 3.2rem 6rem;
+  }
+
+  .modal__overlay {
+    border-radius: 0;
+  }
+
+  .modal__overlay--loading {
+    font-size: 6rem;
+  }
+
+  .modal__overlay--success {
+    font-size: 3.2rem;
+  }
+
+  .modal__about {
+    box-shadow: 0px -24px 80px 0 rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal__contact {
+    box-shadow: 0px 24px 80px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .modal__title {
+    font-size: 2.4rem;
+  }
+
+  .modal__para {
+    font-size: 1.6rem;
+  }
+
+  .modal__exit--white {
+    display: none;
+  }
+
+  .modal__exit--black {
+    display: block;
+  }
+
+  .modal__language {
+    max-width: 10rem;
+  }
+
+  .section__title {
+    font-size: 3.6rem;
+  }
+
+  .project__description {
+    left: 4rem;
+    max-width: 400px;
+  }
+
+  .project__title {
+    font-size: 4rem;
+  }
+
+  .project__sub-title {
+    font-size: 1.4rem;
+  }
+
+  .project__para {
+    font-size: 1.6rem;
+  }
+
+  .project__link {
+    font-size: 2rem;
   }
 
   .footer__container {
@@ -957,9 +1096,21 @@ RESPONSIVENESS
 }
 
 /* Small phones */
-@media (max-width: 496px) {
+@media (max-width: 540px) {
+  .modal__half {
+    padding: 2.4rem 4rem;
+  }
+
   #hero {
     padding: 0 24px;
+  }
+
+  .hero__row {
+    padding-bottom: 160px;
+  }
+
+  .hero__message {
+    max-width: 400px;
   }
 
   .hero__title {
@@ -971,7 +1122,37 @@ RESPONSIVENESS
     font-size: 1.8rem;
   }
 
+  .hero__link {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.4rem;
+  }
+
   .nav__link:first-child {
     display: none;
+  }
+
+  .project__description {
+    left: 0;
+    width: 100%;
+    max-width: none;
+    text-align: center;
+  }
+
+  .project__title {
+    font-size: 2.8rem;
+  }
+
+  .project__sub-title {
+    font-size: 1.4rem;
+  }
+
+  .project__para {
+    display: none;
+  }
+
+  .project__links {
+    display: flex;
+    justify-content: center;
   }
 }

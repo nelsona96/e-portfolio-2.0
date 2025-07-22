@@ -48,16 +48,14 @@
           </svg>
         </figure>
         <ul class="nav__links">
-          <li class="nav__link">
-            <a
-              href="#"
-              class="nav__anchor link__hover-effect link__hover-effect--black"
+          <li class="nav__link" onclick="toggleModal()">
+            <a class="nav__anchor link__hover-effect link__hover-effect--black"
               >About</a
             >
           </li>
           <li class="nav__link">
             <a
-              href="#"
+              href="#projects"
               class="nav__anchor link__hover-effect link__hover-effect--black"
               >Projects</a
             >
@@ -139,6 +137,11 @@
                 <span class="language__name">React</span>
               </figure>
             </div>
+            <i
+              class="fas fa-times modal__exit modal__exit--black click"
+              onclick="toggleModal()"
+            >
+            </i>
           </div>
           <div class="modal__half modal__contact">
             <h3 class="modal__title modal__title--contact">
@@ -185,7 +188,10 @@
               <br />
               Looking forward to speaking to you soon.
             </div>
-            <i class="fas fa-times modal__exit click" onclick="toggleModal()">
+            <i
+              class="fas fa-times modal__exit modal__exit--white click"
+              onclick="toggleModal()"
+            >
             </i>
           </div>
         </div>
@@ -257,7 +263,7 @@
                     class="project__img"
                   />
                   <div class="project__description">
-                    <h3 class="project__title">Car Sales Projects</h3>
+                    <h3 class="project__title">Car Sales Project</h3>
                     <h4 class="project__sub-title">
                       HTML, CSS, JavaScript, React
                     </h4>
@@ -286,7 +292,7 @@
                     class="project__img"
                   />
                   <div class="project__description">
-                    <h3 class="project__title">Car Sales Projects</h3>
+                    <h3 class="project__title">Car Sales Project</h3>
                     <h4 class="project__sub-title">
                       HTML, CSS, JavaScript, React
                     </h4>
@@ -315,7 +321,7 @@
                     class="project__img"
                   />
                   <div class="project__description">
-                    <h3 class="project__title">Car Sales Projects</h3>
+                    <h3 class="project__title">Car Sales Project</h3>
                     <h4 class="project__sub-title">
                       HTML, CSS, JavaScript, React
                     </h4>
