@@ -324,7 +324,6 @@ ABSOLUTE/FIXED/FLOATING ELEMENTS
   max-width: 1100px;
   height: 700px;
   border-radius: 20px;
-  /* overflow: hidden; */
   display: flex;
   visibility: hidden;
   z-index: -1;
@@ -332,7 +331,6 @@ ABSOLUTE/FIXED/FLOATING ELEMENTS
 }
 
 .modal--open .modal {
-  /* box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.5); */
   visibility: visible;
   z-index: 1000;
   transition: visibility 1s, z-index 1s;
@@ -530,10 +528,11 @@ ABSOLUTE/FIXED/FLOATING ELEMENTS
 
 .modal__exit--white {
   color: #fff;
+  visibility: visible;
 }
 
 .modal__exit--black {
-  display: none;
+  visibility: hidden;
   color: #27272a;
   top: 1.6rem;
   right: 2.4rem;
@@ -1054,11 +1053,11 @@ RESPONSIVENESS
   }
 
   .modal__exit--white {
-    display: none;
+    visibility: hidden;
   }
 
   .modal__exit--black {
-    display: block;
+    visibility: visible;
   }
 
   .modal__language {
